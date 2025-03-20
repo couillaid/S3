@@ -1,4 +1,7 @@
-AWSTemplateFormatVersion: 2019-09-09
+#Changes to errors
+#Revision 2
+#19 March 2025
+AWSTemplateFormatVersion: 2010-09-09
 Resorces:
   S3Bucket:
     Type: 'AWS:S3:Bucket'
@@ -13,8 +16,8 @@ Resorces:
         ErrorDocument: error.html
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
-BucketPolicy:
-    #Type: 'AWS::S3::BucketPolicy'
+  BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
     Properties:
       PolicyDocument:
         Id: MyPolicy
